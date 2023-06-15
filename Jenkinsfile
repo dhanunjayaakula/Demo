@@ -31,6 +31,7 @@ steps {
 echo 'Code will be deployed if the tests are passed'
         }
 }
+}
 post {
     always {
         archiveArtifacts artifacts: 'Reports/**/*.*', fingerprint: true
