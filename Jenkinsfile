@@ -12,7 +12,7 @@ echo 'Cloning projet from GITHUB'
 git branch: 'master', url: 'https://github.com/dhanunjayaakula/Demo.git'
             }
         }
-    stage('Fetch Katalon') {
+    stage('Deploy') {
 steps {
 echo 'Cloning projet from GITHUB'
 git branch: 'master', url: 'https://github.com/dhanunjayaakula/WatchYES'
@@ -26,7 +26,7 @@ sh 'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.s
 }
         }
     }
-    stage('Deploy') {
+    stage('Prod') {
 steps {
 echo 'Code will be deployed if the tests are passed'
         }
