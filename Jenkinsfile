@@ -35,7 +35,6 @@ echo 'Code will be deployed if the tests are passed'
 post {
     always {
         archiveArtifacts artifacts: 'Reports/**/*.*', fingerprint: true
-        junit 'Reports/*/YES/*/*.xml'
 
         echo 'Slack Notification'
             slackSend( channel: "#appbuilds-qa-automation",
